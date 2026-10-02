@@ -1,0 +1,1014 @@
+/* ==========================================================================
+   RAHAT KHAN — CINEMATIC VIDEO EDITOR PORTFOLIO
+   Keyframes & Cinematic Animation Engine
+   ========================================================================== */
+
+@keyframes pulseGreen {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes pulseRec {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+}
+
+@keyframes blinkCursor {
+  0%, 100% {
+    border-color: var(--text-primary);
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes floatElement {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes shimmerSweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes waveformBounce {
+  0%, 100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes glowRotate {
+  0% {
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.5));
+  }
+  100% {
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+  }
+}
+
+@keyframes heroTitleShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes heroTitleGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 16px rgba(255, 255, 255, 0.2)) drop-shadow(0 0 8px rgba(239, 68, 68, 0.15));
+    transform: translateY(0);
+  }
+  50% {
+    filter: drop-shadow(0 0 35px rgba(239, 68, 68, 0.45)) drop-shadow(0 0 18px rgba(255, 255, 255, 0.5));
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes heroTitleGlowLight {
+  0%, 100% {
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12));
+    transform: translateY(0);
+  }
+  50% {
+    filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.25)) drop-shadow(0 0 14px rgba(239, 68, 68, 0.4));
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes heroTitleGlowCyberpunk {
+  0%, 100% {
+    filter: drop-shadow(0 0 16px rgba(168, 85, 247, 0.35)) drop-shadow(0 0 8px rgba(6, 182, 212, 0.25));
+    transform: translateY(0);
+  }
+  50% {
+    filter: drop-shadow(0 0 35px rgba(168, 85, 247, 0.7)) drop-shadow(0 0 18px rgba(6, 182, 212, 0.6));
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes heroTitleGlowEmerald {
+  0%, 100% {
+    filter: drop-shadow(0 0 16px rgba(16, 185, 129, 0.35)) drop-shadow(0 0 8px rgba(52, 211, 153, 0.25));
+    transform: translateY(0);
+  }
+  50% {
+    filter: drop-shadow(0 0 35px rgba(16, 185, 129, 0.7)) drop-shadow(0 0 18px rgba(110, 231, 183, 0.6));
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes heroTitleGlowSunset {
+  0%, 100% {
+    filter: drop-shadow(0 0 16px rgba(245, 158, 11, 0.35)) drop-shadow(0 0 8px rgba(251, 191, 36, 0.25));
+    transform: translateY(0);
+  }
+  50% {
+    filter: drop-shadow(0 0 35px rgba(245, 158, 11, 0.7)) drop-shadow(0 0 18px rgba(253, 230, 138, 0.6));
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes heroTitleGlowCrimson {
+  0%, 100% {
+    filter: drop-shadow(0 0 16px rgba(239, 68, 68, 0.35)) drop-shadow(0 0 8px rgba(244, 63, 94, 0.25));
+    transform: translateY(0);
+  }
+  50% {
+    filter: drop-shadow(0 0 35px rgba(239, 68, 68, 0.75)) drop-shadow(0 0 18px rgba(254, 205, 211, 0.6));
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes heroTitleGlowSapphire {
+  0%, 100% {
+    filter: drop-shadow(0 0 16px rgba(59, 130, 246, 0.35)) drop-shadow(0 0 8px rgba(96, 165, 250, 0.25));
+    transform: translateY(0);
+  }
+  50% {
+    filter: drop-shadow(0 0 35px rgba(59, 130, 246, 0.7)) drop-shadow(0 0 18px rgba(191, 219, 254, 0.6));
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes avatarScanlineSweep {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(400%);
+    opacity: 0;
+  }
+}
+
+/* Dynamic Card Glow Border Chaser */
+@keyframes cardBeamRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Video Editor Timeline Playhead Glider */
+@keyframes playheadGlide {
+  0% {
+    left: 4%;
+  }
+  48% {
+    left: 88%;
+  }
+  52% {
+    left: 88%;
+  }
+  100% {
+    left: 4%;
+  }
+}
+
+/* Audio Track Wave Bar Jumper */
+@keyframes audioTrackWave {
+  0%, 100% {
+    transform: scaleY(0.4);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/* Button Radiant Laser Sweep */
+@keyframes btnLaserSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  25%, 100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+/* Tech Tag Micro-float */
+@keyframes techTagHoverFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes avatarBorderPulse {
+  0%, 100% {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(239, 68, 68, 0.1);
+  }
+  50% {
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.5), 0 0 25px rgba(239, 68, 68, 0.28);
+  }
+}
+
+/* Scroll Reveal Classes */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger Delays */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+
+/* Single Page Sections Flow */
+.page-view {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Floating Badges */
+.floating-anim {
+  animation: floatElement 4s ease-in-out infinite;
+}
+
+.floating-anim-delay {
+  animation: floatElement 4.5s ease-in-out infinite 1.5s;
+}
+
+/* ==========================================================================
+   SUBTLE 3D SECTION SCROLL ENTRANCE ENGINE (GENTLE & SLEEK)
+   ========================================================================== */
+.section-3d-container {
+  will-change: transform, opacity;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(20px);
+  opacity: 0.85;
+}
+
+.section-3d-container.section-3d-in-view {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Subtle 3D Card Parallax Tilt Base */
+.tilt-3d-card {
+  transform-style: preserve-3d;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+  will-change: transform;
+}
+
+.tilt-3d-card:hover {
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(239, 68, 68, 0.08);
+}
+
+/* Subtle App Container Push effect on Section Jump */
+.app-container {
+  transition: opacity 0.3s ease, transform 0.4s ease;
+}
+
+.app-container.app-3d-warping {
+  opacity: 0.95;
+  transform: perspective(1200px) translateZ(-20px);
+}
+
+/* ==========================================================================
+/* ==========================================================================
+   BESPOKE 3D MULTI-SECTION TRANSITION CURTAINS (বিভিন্ন পেইজের জন্য আলাদা আলাদা অ্যানিমেশন)
+   ========================================================================== */
+.matrix-3d-transition {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 99995;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s;
+  perspective: 1200px;
+  overflow: hidden;
+}
+
+.matrix-3d-transition.matrix-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Full-Screen Hyperspace Warp Portal Canvas */
+.warp-portal-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.95;
+}
+
+/* Full-Screen 3D Shutter Slats Layer (100% Viewport Coverage) */
+.full-screen-slats-layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  transform-style: preserve-3d;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.fs-slat {
+  flex: 1;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(8, 8, 12, 0.96) 0%, rgba(18, 10, 14, 0.98) 100%);
+  border-right: 1px solid rgba(239, 68, 68, 0.3);
+  transform-origin: left center;
+  transform: rotateY(-90deg);
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.matrix-3d-transition.matrix-active .fs-1 { transition-delay: 0.03s; transform: rotateY(0deg); }
+.matrix-3d-transition.matrix-active .fs-2 { transition-delay: 0.06s; transform: rotateY(0deg); }
+.matrix-3d-transition.matrix-active .fs-3 { transition-delay: 0.09s; transform: rotateY(0deg); }
+.matrix-3d-transition.matrix-active .fs-4 { transition-delay: 0.12s; transform: rotateY(0deg); }
+.matrix-3d-transition.matrix-active .fs-5 { transition-delay: 0.15s; transform: rotateY(0deg); }
+.matrix-3d-transition.matrix-active .fs-6 { transition-delay: 0.18s; transform: rotateY(0deg); }
+
+/* Holographic Cyber HUD Grid Overlay */
+.fs-hud-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.fs-hud-frame {
+  position: relative;
+  width: 90vw;
+  height: 85vh;
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 24px;
+}
+
+.fs-hud-bracket {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-color: #ef4444;
+  border-style: solid;
+}
+.fs-hud-bracket.tl { top: -2px; left: -2px; border-width: 2px 0 0 2px; }
+.fs-hud-bracket.tr { top: -2px; right: -2px; border-width: 2px 2px 0 0; }
+.fs-hud-bracket.bl { bottom: -2px; left: -2px; border-width: 0 0 2px 2px; }
+.fs-hud-bracket.br { bottom: -2px; right: -2px; border-width: 0 2px 2px 0; }
+
+.fs-hud-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: #ef4444;
+  text-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+  background: rgba(8, 8, 12, 0.85);
+  padding: 4px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  animation: pulse 1.2s infinite;
+}
+
+/* Card Dynamic 3D Glare Reflection Layer */
+.card-glare-reflection {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* --------------------------------------------------------------------------
+   1. HOME: APERTURE VORTEX ZOOM REVEAL (হোলোগ্রাম অ্যাপারচার জুম)
+   -------------------------------------------------------------------------- */
+.warp-fx-home, .warp-fx-about, .warp-fx-skills, .warp-fx-portfolio, .warp-fx-contact {
+  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.matrix-3d-transition.warp-home .warp-fx-home {
+  display: block;
+}
+
+.aperture-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 2px dashed rgba(239, 68, 68, 0.4);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.65s ease;
+}
+
+.matrix-3d-transition.warp-home.matrix-active .aperture-ring.r1 {
+  width: 250px; height: 250px;
+  transform: translate(-50%, -50%) scale(1) rotate(180deg);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+.matrix-3d-transition.warp-home.matrix-active .aperture-ring.r2 {
+  width: 480px; height: 480px;
+  transform: translate(-50%, -50%) scale(1) rotate(-180deg);
+  border-color: rgba(239, 68, 68, 0.5);
+  transition-delay: 0.08s;
+}
+.matrix-3d-transition.warp-home.matrix-active .aperture-ring.r3 {
+  width: 750px; height: 750px;
+  transform: translate(-50%, -50%) scale(1) rotate(90deg);
+  border-color: rgba(255, 255, 255, 0.3);
+  transition-delay: 0.16s;
+}
+
+.aperture-laser-flash {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(239, 68, 68, 0.28) 0%, rgba(9, 9, 11, 0.95) 75%);
+  transform: scale(0.6);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+}
+
+.matrix-3d-transition.warp-home.matrix-active .aperture-laser-flash {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   2. ABOUT: 3D ORIGAMI DIAGONAL MATRIX SLATS (অরিগামি ৩ডি ডায়াগোনাল স্লাইস)
+   -------------------------------------------------------------------------- */
+.matrix-3d-transition.warp-about .warp-fx-about {
+  display: block;
+}
+
+.diagonal-slat {
+  position: absolute;
+  width: 140%;
+  height: 28%;
+  left: -20%;
+  background: linear-gradient(105deg, rgba(14, 14, 18, 0.96) 0%, rgba(26, 12, 16, 0.98) 100%);
+  border-bottom: 2px solid rgba(239, 68, 68, 0.4);
+  transform-origin: left center;
+  transform: rotate(-15deg) rotateX(90deg);
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.diagonal-slat.s1 { top: -10%; transition-delay: 0.04s; }
+.diagonal-slat.s2 { top: 22%; transition-delay: 0.1s; }
+.diagonal-slat.s3 { top: 54%; transition-delay: 0.16s; }
+.diagonal-slat.s4 { top: 86%; transition-delay: 0.22s; }
+
+.matrix-3d-transition.warp-about.matrix-active .diagonal-slat {
+  transform: rotate(-15deg) rotateX(0deg);
+}
+
+.biometric-scanner-beam {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 3px;
+  background: linear-gradient(90deg, transparent, #ef4444, #ffffff, #ef4444, transparent);
+  box-shadow: 0 0 16px #ef4444;
+  transform: translateY(-100px);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.matrix-3d-transition.warp-about.matrix-active .biometric-scanner-beam {
+  transform: translateY(100vh);
+}
+
+/* --------------------------------------------------------------------------
+   3. SKILLS: 3D CYBER AUDIO EQUALIZER MATRIX (ইকুয়ালাইজার ৩ডি সাইবার বার্স)
+   -------------------------------------------------------------------------- */
+.matrix-3d-transition.warp-skills .warp-fx-skills {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  padding: 0 5vw;
+}
+
+.eq-slat {
+  flex: 1;
+  background: linear-gradient(0deg, rgba(239, 68, 68, 0.35) 0%, rgba(18, 18, 24, 0.95) 70%, rgba(255, 255, 255, 0.8) 100%);
+  border-top: 3px solid #ef4444;
+  height: 0%;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
+  transition: height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.matrix-3d-transition.warp-skills.matrix-active .eq-1 { height: 75%; transition-delay: 0.05s; }
+.matrix-3d-transition.warp-skills.matrix-active .eq-2 { height: 95%; transition-delay: 0.12s; }
+.matrix-3d-transition.warp-skills.matrix-active .eq-3 { height: 85%; transition-delay: 0.08s; }
+.matrix-3d-transition.warp-skills.matrix-active .eq-4 { height: 100%; transition-delay: 0.15s; }
+.matrix-3d-transition.warp-skills.matrix-active .eq-5 { height: 70%; transition-delay: 0.1s; }
+
+/* --------------------------------------------------------------------------
+   4. PORTFOLIO: CINEMATIC 35MM FILMSTRIP SLIDE (সিনেমাটিক ফিল্মস্ট্রিপ স্লাইড)
+   -------------------------------------------------------------------------- */
+.matrix-3d-transition.warp-portfolio .warp-fx-portfolio {
+  display: block;
+}
+
+.filmstrip-curtain {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: #09090b;
+  transform: translateX(-100%);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.filmstrip-curtain.top-strip {
+  top: 0;
+  height: 48px;
+  background: #0d0d12;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.filmstrip-curtain.main-blade {
+  top: 48px;
+  bottom: 48px;
+  height: auto;
+  background: linear-gradient(90deg, rgba(8, 8, 10, 0.98) 0%, rgba(20, 10, 14, 0.95) 100%);
+  border-left: 3px solid #ef4444;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.9);
+}
+
+.filmstrip-curtain.btm-strip {
+  bottom: 0;
+  height: 48px;
+  background: #0d0d12;
+  border-top: 2px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sprocket {
+  width: 22px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.matrix-3d-transition.warp-portfolio.matrix-active .filmstrip-curtain {
+  transform: translateX(0);
+}
+
+.anamorphic-flare-sweep {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #38bdf8, #ffffff, #ef4444, transparent);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.8), 0 0 15px rgba(239, 68, 68, 0.8);
+  transform: scaleX(0);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+}
+
+.matrix-3d-transition.warp-portfolio.matrix-active .anamorphic-flare-sweep {
+  transform: scaleX(1);
+}
+
+/* --------------------------------------------------------------------------
+   5. CONTACT: HOLOGRAPHIC RADAR SONAR WAVE (রাডার সোনার পালস ওয়েভ)
+   -------------------------------------------------------------------------- */
+.matrix-3d-transition.warp-contact .warp-fx-contact {
+  display: block;
+}
+
+.radar-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 2px solid rgba(239, 68, 68, 0.8);
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.75s ease;
+}
+
+.matrix-3d-transition.warp-contact.matrix-active .radar-pulse.rp1 {
+  width: 800px; height: 800px;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.6;
+}
+
+.matrix-3d-transition.warp-contact.matrix-active .radar-pulse.rp2 {
+  width: 1200px; height: 1200px;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.3;
+  transition-delay: 0.15s;
+}
+
+.cyber-signal-sweep {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 150vmax; height: 150vmax;
+  background: conic-gradient(from 0deg, transparent 0deg, rgba(239, 68, 68, 0.25) 45deg, transparent 90deg);
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.matrix-3d-transition.warp-contact.matrix-active .cyber-signal-sweep {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+/* ==========================================================================
+   UNIQUE CONTENT REVEAL ANIMATIONS FOR EACH SECTION
+   ========================================================================== */
+
+/* 1. Home Cards Reveal (Vortex Zoom) */
+.reveal-home-vortex {
+  opacity: 0;
+  transform: perspective(1000px) scale(0.85) translateZ(-40px);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.65s ease;
+  transition-delay: calc(var(--col-idx, 0) * 80ms);
+}
+.section-3d-in-view .reveal-home-vortex {
+  opacity: 1;
+  transform: perspective(1000px) scale(1) translateZ(0);
+}
+
+/* 2. About Cards Reveal (3D Origami Fold) */
+.reveal-about-origami {
+  opacity: 0;
+  transform: perspective(1000px) rotateY(25deg) translateY(35px);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.65s ease;
+  transition-delay: calc(var(--col-idx, 0) * 90ms + var(--row-idx, 0) * 100ms);
+}
+.section-3d-in-view .reveal-about-origami {
+  opacity: 1;
+  transform: perspective(1000px) rotateY(0deg) translateY(0);
+}
+
+/* 3. Skills Cards Reveal (Cyber Equalizer Rise) */
+.reveal-skills-equalizer {
+  opacity: 0;
+  transform: perspective(1000px) translateY(60px) rotateX(-25deg);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.65s ease;
+  transition-delay: calc(var(--col-idx, 0) * 60ms + var(--row-idx, 0) * 70ms);
+}
+.section-3d-in-view .reveal-skills-equalizer {
+  opacity: 1;
+  transform: perspective(1000px) translateY(0) rotateX(0deg);
+}
+
+/* 4. Portfolio Cards Reveal (Filmstrip Parallax Wave) */
+.reveal-portfolio-filmstrip {
+  opacity: 0;
+  transform: perspective(1000px) translateX(45px) rotateY(-15deg);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.65s ease;
+  transition-delay: calc(var(--col-idx, 0) * 80ms + var(--row-idx, 0) * 90ms);
+}
+.section-3d-in-view .reveal-portfolio-filmstrip {
+  opacity: 1;
+  transform: perspective(1000px) translateX(0) rotateY(0deg);
+}
+
+/* 5. Contact Cards Reveal (Radar Hologram Pulse) */
+.reveal-contact-radar {
+  opacity: 0;
+  transform: perspective(1000px) scale(0.92) translateZ(30px);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.65s ease;
+}
+.section-3d-in-view .reveal-contact-radar {
+  opacity: 1;
+  transform: perspective(1000px) scale(1) translateZ(0);
+}
+
+/* Generic Fallback */
+.matrix-3d-card-reveal {
+  opacity: 0;
+  transform: perspective(1000px) translateY(25px);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.65s ease;
+}
+.section-3d-in-view .matrix-3d-card-reveal {
+  opacity: 1;
+  transform: perspective(1000px) translateY(0);
+}
+
+@keyframes rotateCrosshair {
+  from { transform: translate(-50%, -50%) rotate(0deg) scale(0.6); }
+  to { transform: translate(-50%, -50%) rotate(180deg) scale(1.2); }
+}
+
+/* ==========================================================================
+   LIQUID WATER WAVE RIPPLE EFFECT FOR IMAGES
+   ========================================================================== */
+.wave-interactive-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-wave-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 6;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  overflow: hidden;
+}
+
+.wave-interactive-container:hover .liquid-wave-overlay {
+  opacity: 1;
+}
+
+.wave-crest {
+  position: absolute;
+  inset: -50%;
+  border-radius: 40%;
+  pointer-events: none;
+  opacity: 0.18;
+  mix-blend-mode: overlay;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(239, 68, 68, 0.25) 50%, transparent 100%);
+  animation: liquidWaveSpin 6s linear infinite;
+}
+
+.wave-crest-2 {
+  border-radius: 45%;
+  opacity: 0.12;
+  animation: liquidWaveSpin 8s linear infinite reverse;
+  animation-delay: -2s;
+}
+
+.wave-crest-3 {
+  border-radius: 38%;
+  opacity: 0.08;
+  animation: liquidWaveSpin 10s linear infinite;
+  animation-delay: -4s;
+}
+
+@keyframes liquidWaveSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Expanding Water Wave Ripple Ring on Image Hover */
+.image-water-ripple {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), inset 0 0 15px rgba(239, 68, 68, 0.4);
+  pointer-events: none;
+  z-index: 7;
+  transform: translate(-50%, -50%) scale(1);
+  animation: waterRippleExpand 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes waterRippleExpand {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0.9;
+    border-width: 3px;
+  }
+  50% {
+    opacity: 0.6;
+    border-width: 2px;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(22);
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+
+/* SVG Liquid Wave Displacement Animation */
+.wave-distorting {
+  filter: url(#liquid-wave-distortion);
+  transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   SUBTLE AMBIENT TEXT ANIMATION SYSTEM (হালকা টেক্সট অ্যানিমেশন)
+   ========================================================================== */
+
+/* 1. Subtle Heading Breathing Wave */
+@keyframes subtleHeadingWave {
+  0%, 100% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 14px var(--theme-accent-glow, rgba(255, 255, 255, 0.2)));
+  }
+  50% {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 0 24px var(--theme-accent-glow, rgba(255, 255, 255, 0.4)));
+  }
+}
+
+/* 2. Gentle Text Ambient Flow */
+@keyframes subtleParagraphFlow {
+  0%, 100% {
+    color: var(--text-secondary);
+    text-shadow: 0 0 0 transparent;
+  }
+  50% {
+    color: var(--text-primary);
+    text-shadow: 0 0 8px var(--theme-accent-glow, rgba(255, 255, 255, 0.18));
+  }
+}
+
+/* 3. Subtle Stat Number Pulse */
+@keyframes subtleNumberGlow {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 6px var(--theme-accent-glow, rgba(255, 255, 255, 0.2)));
+  }
+  50% {
+    transform: scale(1.025);
+    filter: drop-shadow(0 0 18px var(--theme-accent-glow, rgba(255, 255, 255, 0.5));
+  }
+}
+
+/* 4. Subtle Tag Float & Glow */
+@keyframes subtleTagFloat {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px var(--theme-accent-glow, rgba(255, 255, 255, 0.3));
+  }
+}
+
+/* 5. Subtle Text Shimmer Gradient */
+@keyframes subtleTextShimmerGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 6. Subtle Light Theme Heading Wave */
+@keyframes subtleHeadingWaveLight {
+  0%, 100% {
+    transform: translateY(0);
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12));
+  }
+  50% {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.22));
+  }
+}
+
+/* ==========================================================================
+   UNIVERSAL ELEMENT ANIMATIONS (নাম ও সব কম্পোনেন্টের প্রাণবন্ত অ্যানিমেশন)
+   ========================================================================== */
+
+/* 1. Name Kinetic Prismatic Shimmer */
+@keyframes nameKineticShimmer {
+  0% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 16px var(--theme-accent-glow, rgba(255, 255, 255, 0.25)));
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 35px var(--theme-accent-glow, rgba(255, 255, 255, 0.6))) drop-shadow(0 0 15px rgba(239, 68, 68, 0.4));
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 16px var(--theme-accent-glow, rgba(255, 255, 255, 0.25)));
+  }
+}
+
+/* 2. Software Icon 3D Levitation */
+@keyframes softwareIconLevitate {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(2deg);
+  }
+}
+
+/* 3. Project Card Ambient Glow Breathing */
+@keyframes projectCardGlowBreath {
+  0%, 100% {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 0px transparent;
+    border-color: var(--border-subtle);
+  }
+  50% {
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.6), 0 0 16px var(--theme-accent-glow, rgba(255, 255, 255, 0.15));
+    border-color: var(--border-medium);
+  }
+}
+
+/* 4. Workflow Step Halo Pulse */
+@keyframes workflowHaloPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 var(--theme-accent-glow, rgba(239, 68, 68, 0.4));
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 0 0 8px transparent;
+  }
+}
+
+/* 5. Nav Brand Logo Camera Shutter Rotation */
+@keyframes shutterIrisSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 6. Social Icon Floating Bounce */
+@keyframes socialIconFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* 7. Section Title Underline Light Runner */
+@keyframes sectionUnderlineRun {
+  0% {
+    transform: translateX(-100%);
+  }
+  50%, 100% {
+    transform: translateX(100%);
+  }
+}
+

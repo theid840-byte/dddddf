@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RAHAT KHAN // Video Editor & Creative Designer Portfolio</title>
+  <meta name="description" content="Official personal portfolio of Rahat Khan — Professional Video Editor, Creative Designer, and Motion Graphics Artist. Premium visual editing, color grading, and viral content creation.">
+  <meta name="keywords" content="Rahat Khan, Video Editor, Creative Editor, Motion Graphics, Premiere Pro, After Effects, DaVinci Resolve, Color Grading, YouTube Video Editing, Cinematic Portfolio">
+  <meta name="author" content="Rahat Khan">
+  
+  <link rel="icon" type="image/gif" href="favicon.gif">
+
+  <!-- OpenGraph Tags -->
+  <meta property="og:title" content="RAHAT KHAN // Video Editor & Creative Designer">
+  <meta property="og:description" content="Cinematic video editing, motion graphics, and high-impact visual storytelling.">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bespoke Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Custom Magnetic Cursor -->
+  <div id="custom-cursor" class="custom-cursor"></div>
+  <div id="cursor-follower" class="cursor-follower"></div>
+
+  <!-- Ambient Particle Canvas & Film Grain Texture -->
+  <canvas id="particles-canvas"></canvas>
+  <div class="film-grain"></div>
+
+  <!-- ==========================================
+       CINEMATIC INTRO SCREEN (RK & RAHAT KHAN)
+       ========================================== -->
+  <div id="intro-screen" class="intro-screen">
+    <!-- Dynamic Shockwave & Ambient Glow Canvas -->
+    <canvas id="intro-bg-canvas" class="intro-bg-canvas"></canvas>
+
+    <!-- Center Cinematic Animation Content (RK -> RAHAT KHAN) -->
+    <div class="intro-content">
+      <div class="intro-aura-glow"></div>
+      <div id="intro-monogram" class="intro-monogram">RK</div>
+      <div id="intro-name" class="intro-name" style="display: none;">RAHAT KHAN</div>
+    </div>
+
+    <button id="intro-skip-btn" class="intro-skip-btn interactive" aria-label="Skip Intro Animation">
+      <span>Skip Intro</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="5 4 15 12 5 20 5 4"></polygon>
+        <line x1="19" y1="5" x2="19" y2="19"></line>
+      </svg>
+    </button>
+  </div>
+
+  <!-- ==========================================
+       FIXED NAVIGATION BAR
+       ========================================== -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-brand interactive" aria-label="Rahat Khan Home">
+        <div class="nav-logo-mark" title="Rahat Khan Studio">
+          <div class="rk-logo-shutter-glow"></div>
+          <div class="rk-logo-symbol">
+            <span class="rk-char rk-r">R</span>
+            <span class="rk-divider"></span>
+            <span class="rk-char rk-k">K</span>
+          </div>
+          <div class="rk-logo-badge-dot"></div>
+        </div>
+        <span class="nav-brand-text">RAHAT KHAN</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active interactive">HOME</a></li>
+          <li><a href="#about" class="nav-link interactive">ABOUT</a></li>
+          <li><a href="#skills" class="nav-link interactive">SKILLS</a></li>
+          <li><a href="#portfolio" class="nav-link interactive">PORTFOLIO</a></li>
+          <li><a href="#contact" class="nav-link interactive">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <!-- Quick Actions -->
+      <div class="nav-actions">
+        <button id="sound-toggle-btn" class="sound-toggle-btn interactive" title="Toggle UI Audio Feedback" aria-label="Toggle UI Audio">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+
+        <div class="theme-picker-container" id="theme-picker-container">
+          <button id="theme-toggle-btn" class="theme-toggle-btn interactive" title="Select Color Theme" aria-label="Select Color Theme" aria-haspopup="true" aria-expanded="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+          <div id="theme-palette-dropdown" class="theme-palette-dropdown" role="menu" aria-label="Color Palette Selector"></div>
+        </div>
+
+        <a href="#contact" class="btn btn-primary btn-sm interactive" style="display: none;">Hire Me</a>
+
+        <button id="mobile-menu-btn" class="mobile-menu-btn interactive" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-nav-drawer" class="mobile-nav-drawer">
+    <a href="#home" class="mobile-nav-link active">HOME</a>
+    <a href="#about" class="mobile-nav-link">ABOUT</a>
+    <a href="#skills" class="mobile-nav-link">SKILLS</a>
+    <a href="#portfolio" class="mobile-nav-link">PORTFOLIO</a>
+    <a href="#contact" class="mobile-nav-link">CONTACT</a>
+    
+    <div class="mobile-theme-selector" id="mobile-theme-selector">
+      <div class="mobile-theme-title">THEME PALETTES</div>
+      <div class="mobile-theme-grid" id="mobile-theme-grid"></div>
+    </div>
+  </div>
+
+  <main class="app-container">
+
+    <!-- ==========================================
+         SECTION 1 — HERO & INTERACTIVE WORKSPACE
+         ========================================== -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+
+
+          <h1 class="hero-title-main reveal-on-scroll delay-1" style="text-align: center; width: 100%;">RAHAT KHAN</h1>
+          
+          <div class="hero-typewriter-container reveal-on-scroll delay-2">
+            <span id="typewriter-text" class="typewriter-text">VIDEO EDITOR &amp; CREATIVE DESIGNER</span>
+          </div>
+
+          <p class="hero-intro-text reveal-on-scroll delay-3" style="display: none;">
+          </p>
+
+          <div class="hero-cta-group reveal-on-scroll delay-4">
+            <a href="#portfolio" class="btn btn-primary interactive route-btn">
+              <span>EXPLORE SHOWREEL &amp; WORK</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <a href="#contact" class="btn btn-secondary interactive route-btn">
+              <span>START A COLLABORATION</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ==========================================
+             ULTRA-ADVANCED NEXT-GEN HOME STUDIO DECK
+             ========================================== -->
+        <div class="home-studio-deck reveal-on-scroll delay-5">
+          <!-- Deck Header Bar -->
+          <div class="studio-deck-header">
+            <div class="studio-deck-brand">
+              <div class="studio-dot-grid">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="studio-deck-title">RAHAT KHAN // CREATIVE MASTER SUITE 2026</div>
+            </div>
+
+            <!-- Interactive Mode Tabs -->
+            <div class="studio-tabs-nav">
+              <button class="studio-tab-btn active interactive" data-studio-tab="grading">
+                <span>🎨 Color Science</span>
+              </button>
+              <button class="studio-tab-btn interactive" data-studio-tab="showreel">
+                <span>🎬 Aspect &amp; Speed</span>
+              </button>
+              <button class="studio-tab-btn interactive" data-studio-tab="sound">
+                <span>🎧 Stem Mixer</span>
+              </button>
+              <button class="studio-tab-btn interactive" data-studio-tab="vfx">
+                <span>⚡ 3D Motion VFX</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Deck Body Panels -->
+          <div class="studio-deck-body">
+            
+            <!-- PANEL 1: INTERACTIVE COLOR GRADING BEFORE / AFTER SLIDER -->
+            <div id="studio-panel-grading" class="studio-panel-view active">
+              <div class="grading-workspace-grid">
+                
+                <!-- Draggable Split Screen Comparison Canvas -->
+                <div id="grading-comparison-container" class="grading-slider-container interactive">
+                  <!-- After Layer (Full Graded Master) -->
+                  <div class="grading-layer grading-layer-after">
+                    <div id="grading-target-after" class="grading-scene-visual" style="filter: contrast(125%) saturate(140%) hue-rotate(-8deg) brightness(105%);">
+                      <div class="grading-scene-inner">
+                        <div class="grading-cinematic-badge">4K DCI MASTER // 35MM FILM</div>
+                        <div class="grading-scene-title">CINEMATIC GRADE</div>
+                        <div class="grading-scene-subtitle">ACES LOG ➔ REC.709 MASTER // KODAK FILM GRAIN</div>
+                      </div>
+                      <div id="grading-lut-overlay" class="grading-lut-overlay" style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.25) 0%, rgba(249, 115, 22, 0.25) 100%);"></div>
+                    </div>
+                    <div class="grading-badge-tag tag-graded">✓ FINAL MASTER GRADE</div>
+                  </div>
+
+                  <!-- Before Layer (Clipped RAW LOG) -->
+                  <div id="grading-layer-before" class="grading-layer grading-layer-before">
+                    <div class="grading-scene-visual grading-scene-raw">
+                      <div class="grading-scene-inner">
+                        <div class="grading-cinematic-badge" style="border-color: rgba(255,255,255,0.15); background: rgba(0,0,0,0.8);">FLAT CAMERA PROFILE</div>
+                        <div class="grading-scene-title" style="color: #a1a1aa;">RAW S-LOG3</div>
+                        <div class="grading-scene-subtitle" style="color: #71717a;">UNGRADED SENSOR FEED // LOW CONTRAST</div>
+                      </div>
+                    </div>
+                    <div class="grading-badge-tag tag-raw">◀ RAW UNGRADED S-LOG3</div>
+                  </div>
+
+                  <!-- Central Draggable Split Handle -->
+                  <div id="grading-slider-handle" class="grading-slider-handle">
+                    <div class="handle-glow-button" title="Drag to compare Raw LOG vs Final Grade">
+                      <span>⇹</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Color Science Controls Sidebar -->
+                <div class="grading-controls-sidebar">
+                  <div class="grading-control-box">
+                    <div class="control-box-title">
+                      <span>Active LUT Profile</span>
+                      <span id="active-lut-name" style="color: var(--text-primary); font-weight: 700;">Teal &amp; Orange</span>
+                    </div>
+
+                    <div class="lut-presets-list">
+                      <button class="lut-preset-pill active interactive" data-lut="cine-teal">
+                        <span>Teal &amp; Orange Blockbuster</span>
+                        <span class="lut-dot" style="background: #38bdf8; box-shadow: 0 0 8px #38bdf8;"></span>
+                      </button>
+                      <button class="lut-preset-pill interactive" data-lut="kodak-2383">
+                        <span>Kodak 2383 35mm Film</span>
+                        <span class="lut-dot" style="background: #eab308; box-shadow: 0 0 8px #eab308;"></span>
+                      </button>
+                      <button class="lut-preset-pill interactive" data-lut="cyberpunk">
+                        <span>Cyberpunk Neon Noir</span>
+                        <span class="lut-dot" style="background: #ec4899; box-shadow: 0 0 8px #ec4899;"></span>
+                      </button>
+                      <button class="lut-preset-pill interactive" data-lut="monochrome">
+                        <span>High-Contrast Noir B&amp;W</span>
+                        <span class="lut-dot" style="background: #ffffff; box-shadow: 0 0 8px #ffffff;"></span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="grading-control-box">
+                    <div class="control-box-title">
+                      <span>Real-Time RGB Parade</span>
+                      <span style="color: #10b981;">10-BIT PIPELINE</span>
+                    </div>
+
+                    <div class="scope-parade-grid">
+                      <div class="scope-channel">
+                        <div id="scope-bar-r" class="scope-bar-fill scope-r" style="height: 85%;"></div>
+                        <span class="scope-tag">RED</span>
+                      </div>
+                      <div class="scope-channel">
+                        <div id="scope-bar-g" class="scope-bar-fill scope-g" style="height: 70%;"></div>
+                        <span class="scope-tag">GREEN</span>
+                      </div>
+                      <div class="scope-channel">
+                        <div id="scope-bar-b" class="scope-bar-fill scope-b" style="height: 90%;"></div>
+                        <span class="scope-tag">BLUE</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- PANEL 2: CINEMATIC SHOWREEL WITH ASPECT RATIO & VELOCITY RAMP -->
+            <div id="studio-panel-showreel" class="studio-panel-view">
+              <div class="showreel-stage-wrapper">
+                <div class="showreel-controls-bar">
+                  <!-- Aspect Ratio Controls -->
+                  <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                    <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">VIEWPORT RATIO:</span>
+                    <div class="ratio-switcher-group">
+                      <button class="ratio-switcher-btn active interactive" data-ratio="16-9" data-label="16:9 CINEMA 4K">16:9 Widescreen</button>
+                      <button class="ratio-switcher-btn interactive" data-ratio="9-16" data-label="9:16 SHORTS &amp; TIKTOK">9:16 Viral Vertical</button>
+                      <button class="ratio-switcher-btn interactive" data-ratio="239-1" data-label="2.39:1 ANAMORPHIC">2.39:1 Scope</button>
+                      <button class="ratio-switcher-btn interactive" data-ratio="1-1" data-label="1:1 SQUARE">1:1 Square</button>
+                    </div>
+                  </div>
+
+                  <!-- Speed Ramping Controls -->
+                  <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                    <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">SPEED RAMP:</span>
+                    <div class="speed-ramp-group">
+                      <button class="speed-ramp-btn interactive" data-speed="0.5">0.5x Slow-Mo</button>
+                      <button class="speed-ramp-btn active interactive" data-speed="1.0">1.0x Realtime</button>
+                      <button class="speed-ramp-btn interactive" data-speed="2.5">2.5x Velocity</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Dynamic Viewport Canvas Frame -->
+                <div id="showreel-viewport-frame" class="showreel-viewport-frame ratio-16-9">
+                  <canvas id="home-reel-canvas" class="showreel-canvas"></canvas>
+                  
+                  <!-- Viewport Top Badges -->
+                  <div style="position: absolute; top: 16px; left: 18px; z-index: 10; display: flex; gap: 8px;">
+                    <span class="badge badge-rec"><span class="rec-dot"></span> 60 FPS RENDER</span>
+                    <span id="active-ratio-tag" class="badge" style="background: rgba(0,0,0,0.7); color: #38bdf8;">16:9 CINEMA 4K</span>
+                    <span id="active-speed-tag" class="badge" style="background: rgba(0,0,0,0.7); color: #f59e0b;">1.0X VELOCITY</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANEL 3: 4-TRACK SOUND DESIGN STEM MIXER -->
+            <div id="studio-panel-sound" class="studio-panel-view">
+              <div class="stem-mixer-container">
+                
+                <!-- 4 Tracks List -->
+                <div class="stem-tracks-stack">
+                  <!-- Track 1: Dialogue VOX -->
+                  <div class="stem-track-row">
+                    <div class="stem-track-info">
+                      <span class="stem-track-icon">🎙️</span>
+                      <div>
+                        <div class="stem-track-name">Dialogue VOX</div>
+                        <div class="stem-track-type">-14 LUFS Clean Master</div>
+                      </div>
+                    </div>
+                    <div class="stem-waveform-visual">
+                      <span class="stem-wave-bar" style="animation-delay: 0.1s;"></span>
+                      <span class="stem-wave-bar" style="animation-delay: 0.3s;"></span>
+                      <span class="stem-wave-bar" style="animation-delay: 0.15s;"></span>
+                      <span class="stem-wave-bar" style="animation-delay: 0.4s;"></span>
+                      <span class="stem-wave-bar" style="animation-delay: 0.25s;"></span>
+                    </div>
+                    <div class="stem-fader-control">
+                      <input type="range" min="-12" max="6" value="0" class="stem-fader-input interactive">
+                      <span class="stem-vol-val">0dB</span>
+                    </div>
+                    <button class="stem-mute-btn interactive">LIVE</button>
+                  </div>
+
+                  <!-- Track 2: Cinematic SFX & Foley -->
+                  <div class="stem-track-row">
+                    <div class="stem-track-info">
+                      <span class="stem-track-icon">💥</span>
+                      <div>
+                        <div class="stem-track-name">SFX &amp; Risers</div>
+                        <div class="stem-track-type">Whooshes &amp; Impacts</div>
+                      </div>
+                    </div>
+                    <div class="stem-waveform-visual">
+                      <span class="stem-wave-bar" style="animation-delay: 0.2s;"></span>
+                      <span class="stem-wave-bar" style="animation-delay: 0.5s;"></span>
+                      <span class="stem-wave-bar" style="animation-delay: 0.35s;"></span>
+                      <span class="stem-wave-bar" style="animation-delay: 0.1s;"></span>
+                      <span class="stem-wave-bar" style="animation-delay: 0.45s;"></span>
+                    </div>
+                    <div class="stem-fader-control">
+                      <input type="range" min="-12" max="6" value="0" class="stem-fader-input interactive">
+                      <span class="stem-vol-val">0dB</span>
+                    </div>
+                    <button class="stem-mute-btn interactive">LIVE</button>
+                  </div>
+
+                  <!-- Track 3: Sub-Bass & Heavy Hits -->
+                  <div class="stem-track-row">
+                    <div class="stem-track-info">
+                      <span class="stem-track-icon">🥁</span>
+                      <div>
+                        <div class="stem-track-name">Sub-Bass &amp; Boom</div>
+                        <div class="stem-track-type">40Hz Sub Rumble</div>
+                      </div>
+                    </div>
+                    <div class="stem-waveform-visual">
+                      <span class="stem-wave-bar" style="animation-delay: 0.3s;"></span>
+                      <span class="stem-wave-bar" style="animation-delay: 0.1s;"></span>
+                      <span class="stem-wave-bar" style="animation-delay: 0.4s;"></span>
+                      <span class="stem-wave-bar" style="animation-delay: 0.2s;"></span>
+                      <span class="stem-wave-bar" style="animation-delay: 0.5s;"></span>
+                    </div>
+                    <div class="stem-fader-control">
+                      <input type="range" min="-12" max="6" value="0" class="stem-fader-input interactive">
+                      <span class="stem-vol-val">0dB</span>
+                    </div>
+                    <button class="stem-mute-btn interactive">LIVE</button>
+                  </div>
+
+                  <!-- Track 4: Synth & Trailer Score -->
+                  <div class="stem-track-row">
+                    <div class="stem-track-info">
+                      <span class="stem-track-icon">🎵</span>
+                      <div>
+                        <div class="stem-track-name">Trailer Score</div>
+                        <div class="stem-track-type">Full Synthwave Mix</div>
+                      </div>
+                    </div>
+                    <div class="stem-waveform-visual">
+                      <span class="stem-wave-bar" style="animation-delay: 0.15s;"></span>
+                      <span class="stem-wave-bar" style="animation-delay: 0.35s;"></span>
+                      <span class="stem-wave-bar" style="animation-delay: 0.2s;"></span>
+                      <span class="stem-wave-bar" style="animation-delay: 0.5s;"></span>
+                      <span class="stem-wave-bar" style="animation-delay: 0.25s;"></span>
+                    </div>
+                    <div class="stem-fader-control">
+                      <input type="range" min="-12" max="6" value="0" class="stem-fader-input interactive">
+                      <span class="stem-vol-val">0dB</span>
+                    </div>
+                    <button class="stem-mute-btn interactive">LIVE</button>
+                  </div>
+                </div>
+
+                <!-- Instant SFX Trigger Soundboard -->
+                <div class="grading-control-box">
+                  <div class="control-box-title">
+                    <span>Instant Sound FX Pads</span>
+                    <span style="color: #38bdf8;">WEB AUDIO</span>
+                  </div>
+
+                  <div class="sfx-trigger-pad-grid">
+                    <button class="sfx-trigger-btn interactive" data-sfx="whoosh">
+                      <span>💨 Whoosh</span>
+                      <span style="font-size: 0.68rem; color: var(--text-muted);">Cinematic Wipe</span>
+                    </button>
+                    <button class="sfx-trigger-btn interactive" data-sfx="click">
+                      <span>⚡ Sub-Click</span>
+                      <span style="font-size: 0.68rem; color: var(--text-muted);">Tactile Pop</span>
+                    </button>
+                    <button class="sfx-trigger-btn interactive" data-sfx="success">
+                      <span>✨ Chime Impact</span>
+                      <span style="font-size: 0.68rem; color: var(--text-muted);">Harmonic Bell</span>
+                    </button>
+                    <button class="sfx-trigger-btn interactive" data-sfx="whoosh">
+                      <span>💥 Bass Boom</span>
+                      <span style="font-size: 0.68rem; color: var(--text-muted);">Low Frequency</span>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- PANEL 4: 3D MOTION & VFX COMPOSITOR -->
+            <div id="studio-panel-vfx" class="studio-panel-view">
+              <div class="vfx-stage-container interactive">
+                <div id="vfx-3d-hologram" class="vfx-3d-hologram">
+                  <div class="vfx-hud-crosshair"></div>
+                  
+                  <div class="vfx-floating-layer vfx-layer-1">
+                    <div style="font-size: 1.4rem;">3D CAMERA TRACKING</div>
+                    <div style="font-family: var(--font-mono); font-size: 0.75rem; color: rgba(255,255,255,0.7);">PRECISION MOTION VECTOR SOLVE // 0.02px ERROR</div>
+                  </div>
+
+                  <div class="vfx-floating-layer vfx-layer-2">
+                    <span>⚡ KINETIC 3D TITLES (AFTER EFFECTS)</span>
+                  </div>
+
+                  <div class="vfx-floating-layer vfx-layer-3">
+                    <span>🎞️ OPTICAL FLARES &amp; GLITCH FX</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Deck Footer Telemetry Strip -->
+          <div class="studio-deck-footer">
+            <div class="studio-telemetry-info">
+              <span class="studio-live-indicator"><span class="rec-dot"></span> CUDA 6144 CORES // PRORES 4444 XQ MASTER</span>
+              <span style="opacity: 0.4;">|</span>
+              <span>COLOR: ACES 1.3 LOG</span>
+              <span style="opacity: 0.4;">|</span>
+              <span>AUDIO: -14 LUFS 5.1 MASTER</span>
+            </div>
+
+            <div class="studio-quick-ctas">
+              <a href="#portfolio" class="btn btn-primary btn-sm interactive route-btn">
+                <span>VIEW SHOWCASE</span>
+              </a>
+              <a href="#contact" class="btn btn-secondary btn-sm interactive route-btn">
+                <span>BOOK A CUT</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ANIMATED STATISTICS SECTION -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card interactive reveal-on-scroll delay-1">
+            <div class="stat-number" data-target="500" data-suffix="+">0</div>
+            <div class="stat-label">Video Projects Completed</div>
+          </div>
+
+          <div class="stat-card interactive reveal-on-scroll delay-2">
+            <div class="stat-number" data-target="150" data-suffix="+">0</div>
+            <div class="stat-label">Motion Graphics Assets</div>
+          </div>
+
+          <div class="stat-card interactive reveal-on-scroll delay-3">
+            <div class="stat-number" data-target="30" data-suffix="M+">0</div>
+            <div class="stat-label">Total Views Generated</div>
+          </div>
+
+          <div class="stat-card interactive reveal-on-scroll delay-4">
+            <div class="stat-number" data-target="100" data-suffix="%">0</div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2 — ABOUT & 5-STAGE PIPELINE
+         ========================================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <h2 class="section-title">ABOUT RAHAT KHAN</h2>
+        </div>
+
+        <div class="about-hero-grid">
+          <!-- Profile Image -->
+          <div class="reveal-on-scroll delay-1" style="grid-column: 1 / 2;">
+            <img id="about-profile-img" src="https://via.placeholder.com/400x500" alt="Rahat Khan" style="width: 100%; border-radius: 12px; object-fit: cover; display: block !important; min-height: 200px;">
+          </div>
+          <!-- Bio Narrative -->
+          <div class="reveal-on-scroll delay-2" style="grid-column: 2 / -1; text-align: left;">
+            <div id="about-bio-wrapper">
+                <p class="about-bio-text" style="font-size: 1.4rem; margin-bottom: 20px;">
+                  <strong>Rahat Khan is a creative video editor who works with professional editing, motion graphics, visual effects and content creation.</strong>
+                </p>
+                <p class="about-bio-secondary" style="font-size: 1.15rem; color: #a1a1aa; line-height: 1.7; margin-bottom: 20px;">
+                  With a deep obsession for pacing, sound design, and color grading, I transform raw footage into captivating cinematic experiences. Whether crafting high-retention YouTube long-form content, viral short-form reels, gaming montages, or high-end commercial teasers, my focus is always on storytelling that commands attention and leaves a lasting impact.
+                </p>
+                <p class="about-bio-secondary" style="font-size: 1.15rem; color: #a1a1aa; line-height: 1.7; margin-bottom: 20px;">
+                  I specialize in utilizing industry-leading tools like Adobe Premiere Pro, After Effects, and DaVinci Resolve. Over the years, I have collaborated with numerous creators and brands worldwide, ensuring that every frame reflects perfection and creativity. My goal is to exceed client expectations by delivering high-quality visual content that drives engagement and growth.
+                </p>
+                <p class="about-bio-secondary" style="font-size: 1.15rem; color: #a1a1aa; line-height: 1.7; margin-bottom: 25px;">
+                  Beyond just cutting clips, I believe in the power of visual rhythm. Every transition, every sound effect, and every color grade is carefully chosen to evoke emotion and keep the viewer hooked from the first second to the last. Let's collaborate to turn your creative vision into an unforgettable digital reality.
+                </p>
+            </div>
+
+            <div class="hero-cta-group" style="justify-content: flex-start;">
+              <a href="#portfolio" class="btn btn-primary btn-sm interactive route-btn">EXPLORE PORTFOLIO</a>
+              <a href="#contact" class="btn btn-secondary btn-sm interactive route-btn">START A PROJECT</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3 — SKILLS & ADOBE SOFTWARE SUITE
+         ========================================== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <h2 class="section-title">ADOBE &amp; CREATIVE SOFTWARE SUITE</h2>
+
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="skills-filter-nav reveal-on-scroll delay-1">
+          <button class="filter-pill-btn active interactive" data-category="all">All Adobe &amp; Tools</button>
+          <button class="filter-pill-btn interactive" data-category="editing">Video Editing</button>
+          <button class="filter-pill-btn interactive" data-category="motion">Motion &amp; VFX</button>
+          <button class="filter-pill-btn interactive" data-category="audio">Audio &amp; Color</button>
+          <button class="filter-pill-btn interactive" data-category="design">Graphic Design</button>
+        </div>
+
+        <!-- Dynamic Software Skills Grid -->
+        <div id="software-skills-grid" class="software-skills-grid">
+          <!-- Rendered by js/skills.js with Adobe Brand Badges & SVG Gauges -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4 — PORTFOLIO & WORK SHOWCASE
+         ========================================== -->
+    <section id="portfolio" class="section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <h2 class="section-title">MY WORK</h2>
+        </div>
+
+        <!-- Category Filter Navigation -->
+        <div class="portfolio-filters reveal-on-scroll delay-1">
+          <button class="filter-pill-btn active interactive" data-filter="all">All Work</button>
+          <button class="filter-pill-btn interactive" data-filter="video-editing">Video Editing</button>
+          <button class="filter-pill-btn interactive" data-filter="motion-graphics">Motion Graphics</button>
+          <button class="filter-pill-btn interactive" data-filter="youtube">YouTube Videos</button>
+          <button class="filter-pill-btn interactive" data-filter="shorts">Shorts &amp; Reels</button>
+          <button class="filter-pill-btn interactive" data-filter="gaming">Gaming Videos</button>
+          <button class="filter-pill-btn interactive" data-filter="thumbnails">Thumbnail Design</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div id="project-grid" class="project-grid">
+          <!-- Rendered by js/portfolio.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5 — CONTACT & COLLABORATION
+         ========================================== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-section-wrapper reveal-on-scroll">
+          <div class="contact-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto; text-align: center;">
+            <!-- Left Info Column -->
+            <div class="contact-info-col" style="align-items: center; text-align: center;">
+              <h2 class="section-title" style="font-size: clamp(2rem, 3.8vw, 2.8rem); margin-bottom: 20px;">CONTACT</h2>
+              <div class="contact-direct-items" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; width: 100%; max-width: 900px; margin: 40px auto; text-align: left;">
+                <div class="contact-item" style="padding: 10px; transition: transform 0.3s ease;">
+                  <div class="contact-icon-bubble" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">✉️</div>
+                  <div>
+                    <div class="contact-label" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 4px;">Email Direct</div>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rkiconik@gmail.com" target="_blank" rel="noopener" class="contact-value interactive" id="direct-email" style="font-size: 1.05rem; font-weight: 600;">rkiconik@gmail.com ↗</a>
+                  </div>
+                </div>
+
+                <div class="contact-item" style="padding: 10px; transition: transform 0.3s ease;">
+                  <div class="contact-icon-bubble" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">📞</div>
+                  <div>
+                    <div class="contact-label" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 4px;">Phone / WhatsApp</div>
+                    <a href="https://wa.me/8801403463981" target="_blank" rel="noopener" class="contact-value interactive" id="direct-wa" style="font-size: 1.05rem; font-weight: 600;">WhatsApp/Phone Connect ↗</a>
+                  </div>
+                </div>
+                
+                <div class="contact-item" id="item-fb" style="display: none; padding: 10px; transition: transform 0.3s ease;">
+                  <div class="contact-icon-bubble" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">📘</div>
+                  <div>
+                    <div class="contact-label" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 4px;">Facebook</div>
+                    <a href="#" target="_blank" rel="noopener" class="contact-value interactive" id="direct-fb" style="font-size: 1.05rem; font-weight: 600;">Facebook Profile ↗</a>
+                  </div>
+                </div>
+
+                <div class="contact-item" id="item-insta" style="display: none; padding: 10px; transition: transform 0.3s ease;">
+                  <div class="contact-icon-bubble" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">📸</div>
+                  <div>
+                    <div class="contact-label" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 4px;">Instagram</div>
+                    <a href="#" target="_blank" rel="noopener" class="contact-value interactive" id="direct-insta" style="font-size: 1.05rem; font-weight: 600;">Instagram Profile ↗</a>
+                  </div>
+                </div>
+
+                <div class="contact-item" id="item-yt" style="display: none; padding: 10px; transition: transform 0.3s ease;">
+                  <div class="contact-icon-bubble" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">▶️</div>
+                  <div>
+                    <div class="contact-label" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 4px;">YouTube</div>
+                    <a href="#" target="_blank" rel="noopener" class="contact-value interactive" id="direct-yt" style="font-size: 1.05rem; font-weight: 600;">YouTube Channel ↗</a>
+                  </div>
+                </div>
+
+                <div class="contact-item" style="padding: 10px; transition: transform 0.3s ease; grid-column: 1 / -1;">
+                  <div class="contact-icon-bubble" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">🌍</div>
+                  <div>
+                    <div class="contact-label" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 4px;">Availability &amp; Location</div>
+                    <a href="https://www.google.com/search?q=my+location" target="_blank" rel="noopener" class="contact-value interactive" style="font-size: 1.05rem; font-weight: 600;">Bangladesh // Worldwide Remote (View Location)</a>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="contact-label" style="margin-bottom: 10px;">Connect on Social Platforms</div>
+                <div class="social-links-grid">
+                  <a href="https://www.facebook.com/profile.php?id=61583207372450" target="_blank" rel="noopener" class="social-btn interactive">
+                    <span>Facebook</span>
+                  </a>
+                  <a href="https://www.instagram.com/rahat3180266/?next=%2F" target="_blank" rel="noopener" class="social-btn interactive">
+                    <span>Instagram</span>
+                  </a>
+                  <a href="https://www.youtube.com/@rk31yt" target="_blank" rel="noopener" class="social-btn interactive">
+                    <span>YouTube</span>
+                  </a>
+                  <a href="https://wa.me/8801403463981" target="_blank" rel="noopener" class="social-btn interactive">
+                    <span>WhatsApp</span>
+                  </a>
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rkiconik@gmail.com" target="_blank" rel="noopener" class="social-btn interactive">
+                    <span>Email</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       TOAST NOTIFICATION
+       ========================================== -->
+  <div id="toast-notification" class="toast-notification">
+    <span class="toast-icon">✓</span>
+    <span id="toast-message">Message transmitted successfully!</span>
+  </div>
+
+  <!-- ==========================================
+       INTERACTIVE PROJECT DETAIL MODAL
+       ========================================== -->
+  <div id="project-detail-modal" class="modal-backdrop">
+    <div class="project-modal">
+      <button id="modal-close-btn" class="modal-close-btn interactive" aria-label="Close Project Modal">✕</button>
+      
+      <!-- Dynamic Video Embed or Comparison Slider Container -->
+      <div id="modal-media-container" class="modal-media-container">
+        <!-- Injected dynamically by js/portfolio.js based on YouTube URL or media -->
+      </div>
+
+      <!-- Modal Project Content Details -->
+      <div class="modal-details-body">
+        <h2 id="modal-project-title" style="margin-bottom: 8px;">Project Title</h2>
+        <div style="display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap;">
+          <span class="badge" style="background: var(--border-subtle); color: var(--text-primary);"><strong style="margin-right: 6px;">Client:</strong> <span id="modal-project-client">Studio</span></span>
+          <span class="badge" style="background: var(--border-subtle); color: var(--text-primary);"><strong style="margin-right: 6px;">NLE &amp; Tools:</strong> <span id="modal-project-software">Software</span></span>
+        </div>
+
+        <p id="modal-project-desc" style="font-size: 1.05rem; margin-bottom: 24px; line-height: 1.7; color: var(--text-secondary);">Project description details.</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px; background: var(--bg-tertiary); border-radius: var(--border-radius-md); border: 1px solid var(--border-subtle); margin-bottom: 24px;">
+          <div>
+            <div class="contact-label" style="margin-bottom: 6px;">Master Deliverable</div>
+            <div id="modal-project-deliverable" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-primary);">4K DCI @ 24fps</div>
+          </div>
+          <div>
+            <div class="contact-label" style="margin-bottom: 6px;">Sound &amp; Foley Design</div>
+            <div id="modal-project-sound" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-primary);">5.1 Surround Stems</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="contact-label" style="margin-bottom: 6px;">Color Science &amp; Finishing Note</div>
+          <div id="modal-project-grade" style="font-size: 0.92rem; color: var(--text-secondary);">Color grading notes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Feedback -->
+  <div id="toast-notification" class="toast-notification">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span id="toast-message">Message transmitted successfully!</span>
+  </div>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+          <div class="nav-logo-mark nav-logo-mark-sm">
+            <div class="rk-logo-symbol">
+              <span class="rk-char rk-r">R</span>
+              <span class="rk-divider"></span>
+              <span class="rk-char rk-k">K</span>
+            </div>
+          </div>
+          <div class="footer-credits">
+            <strong>RAHAT KHAN</strong> &copy; 2026. ALL RIGHTS RESERVED. <span style="opacity: 0.6; margin: 0 4px;">//</span> <strong>DEVELOPED BY RAHAT KHAN</strong>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+          <a href="/admin.html" target="_blank" class="footer-admin-link interactive" title="Open Super Admin Dashboard">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <span>ADMIN DASHBOARD</span>
+          </a>
+          <div id="footer-clock-display" class="footer-clock">UTC: 00:00:00 // SYSTEM ACTIVE</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top-btn" class="back-to-top-btn interactive" title="Back to Top" aria-label="Back to Top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+    <span>TOP</span>
+  </button>
+
+  <!-- Main JavaScript App Entrypoint (ES Module) -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
